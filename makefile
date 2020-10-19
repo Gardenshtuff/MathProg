@@ -1,13 +1,13 @@
 
 CC = gcc
 CFLAGS = -g -Wall
+LDFLAGS= -lcurses
 
 all:
-		$(CC) $(CFLAGS) -c discreteStructures.c
-		ar -cvrs discreteStructures.a discreteStructures.o
-		$(CC) $(CFLAGS)  m.c -o m discreteStructures.a
-
+	$(CC) $(CFLAGS) -c bigmathlib.c
+	ar -cvrs BML.a bigmathlib.o
+	$(CC) $(CFLAGS) m.c -o m BML.a
 
 clean:
-		rm m
-		rm -f discreteStructures.a discreteStructures.o
+	rm bigmathlib.a bigmathlib.o
+	rm m

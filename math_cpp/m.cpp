@@ -1,13 +1,14 @@
 #include<iostream>
-#include <ncurses.h>
+#include <curses.h>
 using namespace std;
-main() 
+int main() 
 {
 	initscr();
 	cbreak();
 	noecho();
-	kepad(stdscr, TRUE);
+	keypad(stdscr, TRUE);
 	
+	//WINDOW * win = newwin(nlines, ncols, y0, x0);
 	cout << "Hello World. This is C++ program" << endl;
    
 	endwin();
